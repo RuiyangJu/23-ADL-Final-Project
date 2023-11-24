@@ -15,9 +15,11 @@ Use gdown to download dataset from Google Drive:
 ```
 
 ## Predict
+Use gdown to download example trained model from Google Drive.
+We use the model trained with EfficientNet-B4 as the example:
 ### Example Trained Model Download
 ```
-  gdown
+  bash download_model.sh
 ```
 
 
