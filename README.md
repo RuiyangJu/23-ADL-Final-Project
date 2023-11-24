@@ -14,6 +14,9 @@ Use gdown to download dataset from Google Drive:
   bash download_dataset.sh
 ```
 
+##　Predict
+
+
 ## Preprocess
 Before you run the following steps, make sure `cd 23-ADL-Final-Project`.
 ```
