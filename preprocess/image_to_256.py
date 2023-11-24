@@ -4,8 +4,8 @@ import cv2
 import math
 
 def main(argv=None):
-    image_dir = '../data/Trainset/image/'
-    mask_dir = '../data/Trainset/mask/'
+    image_dir = 'data/Trainset/image/'
+    mask_dir = 'data/Trainset/mask/'
 
     overlap = 30. / 100.
     imgh = 256
@@ -14,8 +14,8 @@ def main(argv=None):
     scale_list = [0.75, 1.00, 1.25, 1.50]
     rotation = [0, 3]
 
-    image_save_dir = '../data/Trainset_256/image/'
-    mask_save_dir = '../data/Trainset_256/mask/'
+    image_save_dir = 'data/Trainset_256/image/'
+    mask_save_dir = 'data/Trainset_256/mask/'
 
     os.makedirs(image_save_dir, exist_ok=True)
     os.makedirs(mask_save_dir, exist_ok=True)
