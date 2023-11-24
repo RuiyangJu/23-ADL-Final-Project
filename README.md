@@ -41,10 +41,10 @@
 
 | Key | Value | Help |
 | :---: | :---: | :---: |
-| --gpu | 0 | GPU number |
-| --gpu | 0 | GPU number |
-| --gpu | 0 | GPU number |
-| --gpu | 0 | GPU number |
+| --gpu | 0 | number of GPU |
+| --epochs | 10 | number of epochs |
+| --lambda_bce | 50.0 | bce weight |
+| --base_model_name | efficientnet-b0 | base model name, i.e. efficientnet-b0 to efficientnet-b7 |
 | --gpu | 0 | GPU number |
 | --gpu | 0 | GPU number |
 | --gpu | 0 | GPU number |
