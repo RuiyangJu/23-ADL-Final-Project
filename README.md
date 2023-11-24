@@ -6,3 +6,9 @@
 ```
   pip install -r requirements.txt
 ```
+
+## Download
+Use gdown to download dataset from Google Drive:
+```
+  bash download.sh
+```
