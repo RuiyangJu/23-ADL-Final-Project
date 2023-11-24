@@ -42,3 +42,8 @@ Before you run the following steps, make sure `cd 23-ADL-Final-Project`.
 ```
   python gobal_prediction.py --gpu 0 --epochs 150 --base_model_name efficientnet-b0 --batch_size 4 --image_train_dir ./data/Trainset_512/image/ --mask_train_dir ./data/Trainset_512/mask/ --image_test_dir ./data/Testset/image/ --mask_test_dir ./data/Testset/mask/
 ```
+
+## Evaluate
+```
+  python evaluate.py --gpu 0 --base_model_name efficientnet-b0 --batch_size 16 --image_test_dir ./data/Testset/image/ --mask_test_dir ./data/Testset/mask/
+```
