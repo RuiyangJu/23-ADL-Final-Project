@@ -5,8 +5,8 @@ from tool_clean import check_is_image, image_padding
 import csv
 
 def main(argv=None):
-    image_dir = ['../data/Trainset/image/', '../data/Testset/image/']
-    mask_dir = ['../data/Trainset/mask/', '../data/Testset/mask/']
+    image_dir = ['data/Trainset/image/', 'data/Testset/image/']
+    mask_dir = ['data/Trainset/mask/', 'data/Testset/mask/']
 
     imgh = 512
     imgw = 512
@@ -17,8 +17,8 @@ def main(argv=None):
     skip_max_length = 512
     padding_resize_ratio = 4
 
-    image_save_dir = ['../data/Trainset_512/image/', '../data/Testset_512/image/']
-    mask_save_dir = ['../data/Trainset_512/mask/', '../data/Testset_512/mask/']
+    image_save_dir = ['data/Trainset_512/image/', 'data/Testset_512/image/']
+    mask_save_dir = ['data/Trainset_512/mask/', 'data/Testset_512/mask/']
 
     kernel = np.ones((5, 5), np.uint8)
     for image_dir, mask_dir, image_save_dir, mask_save_dir in zip(image_dir, mask_dir, image_save_dir, mask_save_dir): 
