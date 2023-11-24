@@ -15,6 +15,10 @@ Use gdown to download dataset from Google Drive:
 ```
 
 ## Predict
+### Example Trained Model Download
+```
+  gdown
+```
 
 
 ## Preprocess
