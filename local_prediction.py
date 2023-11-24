@@ -242,8 +242,8 @@ if __name__ == "__main__":
                        'efficientnet-b4', 'efficientnet-b5', 'efficientnet-b6', 'efficientnet-b7']
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--gpu", type=str, default=0, help="GPU number")
-    parser.add_argument("--epochs", type=int, default=10, help="epochs")
+    parser.add_argument("--gpu", type=str, default=0, help="number of GPU")
+    parser.add_argument("--epochs", type=int, default=10, help="number of epochs")
     parser.add_argument('--lambda_bce', type=float, default=50.0, help='bce weight')
     parser.add_argument('--base_model_name', type=str, default='efficientnet-b0', help='base_model_name')
     parser.add_argument('--encoder_weights', type=str, default='imagenet', help='encoder_weights')
