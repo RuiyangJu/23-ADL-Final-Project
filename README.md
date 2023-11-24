@@ -15,3 +15,9 @@ Use gdown to download dataset from Google Drive:
 ```
 
 ## Preprocess
+```
+  python preprocess/image_to_256.py
+```
+```
+  python preprocess/image_to_512.py
+```
