@@ -26,8 +26,9 @@
   python evaluate.py --gpu 0 --base_model_name efficientnet-b4 --batch_size 16 --image_test_dir ./data/Testset/image/ --mask_test_dir ./data/Testset/mask/
 ```
 
-## Preprocess
-Before you run the following steps, make sure `cd 23-ADL-Final-Project`.
+## Train
+### Preprocess
+* Before you run the following steps, make sure `cd 23-ADL-Final-Project`.
 ```
   python preprocess/image_to_256.py
 ```
