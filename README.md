@@ -8,10 +8,10 @@
   pip install -r requirements.txt
 ```
 
-## Download
+## Dataset Download
 Use gdown to download dataset from Google Drive:
 ```
-  bash download.sh
+  bash download_dataset.sh
 ```
 
 ## Preprocess
