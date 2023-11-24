@@ -27,8 +27,8 @@
 ```
 
 ## Train
-### Preprocess
 * Before you run the following steps, make sure `cd 23-ADL-Final-Project`.
+### Preprocess
 ```
   python preprocess/image_to_256.py
 ```
