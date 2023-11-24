@@ -62,6 +62,25 @@
 
 ### Local Prediciton
 * Local Prediction Preparation
+Arguments:
+
+| Key | Value | Help |
+| :---: | :---: | :---: |
+| --gpu | 0 | number of GPU |
+| --epochs | 10 | number of epochs |
+| --lambda_bce | 50.0 | bce weight |
+| --base_model_name | efficientnet-b0 | base model name, i.e. efficientnet-b0 to efficientnet-b7 |
+| --encoder_weights | imagenet | pretrained encoder dataset |
+| --threshold | 0.30 | threshold for bgr mask |
+| --generator_lr | 2e-4 | generator learning rate |
+| --discriminator_lr | 2e-4 | discriminator learning rate |
+| --batch_size | 16 | batch size, i.e. 16, 32, 64 |
+| --image_train_dir | None | patched image train dir |
+| --mask_train_dir | None | patched mask train dir |
+| --image_test_dir | None | original image test dir |
+| --mask_test_dir | None | original mask test dir |
+
+* For example:
 ```
   python to_local_prediction.py --gpu 0 --original_dir data/Trainset/image/ --image_train_dir data/Trainset_256/image --mask_train_dir data/Trainset_256/mask --image_test_dir data/Testset/image --mask_test_dir data/Testset/mask --base_model_name efficientnet-b0
 ```
