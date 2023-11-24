@@ -67,14 +67,12 @@ Arguments:
 | Key | Value | Help |
 | :---: | :---: | :---: |
 | --gpu | 0 | number of GPU |
-| --epochs | 10 | number of epochs |
+| --base_model_name | efficientnet-b0 | base model name|
 | --lambda_bce | 50.0 | bce weight |
-| --base_model_name | efficientnet-b0 | base model name, i.e. efficientnet-b0 to efficientnet-b7 |
 | --encoder_weights | imagenet | pretrained encoder dataset |
 | --threshold | 0.30 | threshold for bgr mask |
 | --generator_lr | 2e-4 | generator learning rate |
-| --discriminator_lr | 2e-4 | discriminator learning rate |
-| --batch_size | 16 | batch size, i.e. 16, 32, 64 |
+| --original_dir | None | original image train dir |
 | --image_train_dir | None | patched image train dir |
 | --mask_train_dir | None | patched mask train dir |
 | --image_test_dir | None | original image test dir |
