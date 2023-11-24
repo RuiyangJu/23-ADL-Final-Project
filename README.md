@@ -45,12 +45,12 @@
 | --epochs | 10 | number of epochs |
 | --lambda_bce | 50.0 | bce weight |
 | --base_model_name | efficientnet-b0 | base model name, i.e. efficientnet-b0 to efficientnet-b7 |
-| --gpu | 0 | GPU number |
-| --gpu | 0 | GPU number |
-| --gpu | 0 | GPU number |
-| --gpu | 0 | GPU number |
-| --gpu | 0 | GPU number |
-| --gpu | 0 | GPU number |
+| --encoder_weights | imagenet | pretrained encoder dataset |
+| --threshold | 0.30 | threshold for bgr mask |
+| --generator_lr | 2e-4 | generator learning rate |
+| --discriminator_lr | 2e-4 | discriminator learning rate |
+| --batch_size | 16 | batch size, i.e. 16, 32, 64 |
+| --image_train_dir | None | patched image train dir |
 | --gpu | 0 | GPU number |
 
 
