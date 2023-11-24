@@ -51,7 +51,9 @@
 | --discriminator_lr | 2e-4 | discriminator learning rate |
 | --batch_size | 16 | batch size, i.e. 16, 32, 64 |
 | --image_train_dir | None | patched image train dir |
-| --gpu | 0 | GPU number |
+| --mask_train_dir | None | patched mask train dir |
+| --image_test_dir | None | original image test dir |
+| --mask_test_dir | None | original mask test dir |
 
 
 * For example:
