@@ -11,14 +11,14 @@ from base.tool_patch import check_is_image, get_image_patch, image_padding
 from base.metrics import get_metric
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--gpu", type=str, default=0, help="GPU number")
-parser.add_argument('--lambda_bce', type=float, default=50.0, help='bce weight')
+parser.add_argument("--gpu", type=str, default=0, help="number of GPU")
 parser.add_argument('--base_model_name', type=str, default='efficientnet-b0', help='base_model_name')
-parser.add_argument('--encoder_weights', type=str, default='imagenet', help='encoder_weights')
+parser.add_argument('--lambda_bce', type=float, default=50.0, help='bce weight')
+parser.add_argument('--encoder_weights', type=str, default='imagenet', help='pretrained encoder dataset')
+parser.add_argument('--threshold', type=float, default=0.30, help='threshold for bgr mask')
 parser.add_argument('--generator_lr', type=float, default=2e-4, help='generator learning rate')
 parser.add_argument('--discriminator_lr', type=float, default=2e-4, help='discriminator learning rate')
 parser.add_argument('--batch_size', type=int, default=16, help='batch size')
-parser.add_argument('--threshold', type=float, default=0.30, help='threshold for bgr mask')
 parser.add_argument('--image_test_dir', type=str, required=True, help='original image test dir')
 parser.add_argument('--mask_test_dir', type=str, required=True, help='original mask test dir')
 opt = parser.parse_args()
