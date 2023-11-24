@@ -22,3 +22,8 @@ Before you run the following steps, make sure `cd 23-ADL-Final-Project`.
 ```
   python preprocess/image_to_512.py
 ```
+
+## Enhancement
+```
+  python enhancement.py --gpu 0 --epochs 1 --base_model_name efficientnet-b0 --batch_size 32
+```
