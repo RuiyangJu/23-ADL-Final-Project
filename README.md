@@ -9,19 +9,22 @@
 ```
 
 ## Dataset Download
-Use gdown to download dataset from Google Drive:
+* Use gdown to download dataset from Google Drive:
 ```
   bash download_dataset.sh
 ```
 
 ## Predict
-Use gdown to download example trained model from Google Drive.
-We use the model trained with EfficientNet-B4 as the example:
+* Use gdown to download example trained model from Google Drive:
 ### Example Trained Model Download
 ```
   bash download_model.sh
 ```
-
+### Predict with Example Trained Model:
+* We use the model trained with EfficientNet-B4 as the example:
+```
+  python evaluate.py --gpu 0 --base_model_name efficientnet-b4 --batch_size 16 --image_test_dir ./data/Testset/image/ --mask_test_dir ./data/Testset/mask/
+```
 
 ## Preprocess
 Before you run the following steps, make sure `cd 23-ADL-Final-Project`.
