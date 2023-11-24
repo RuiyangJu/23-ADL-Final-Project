@@ -3,3 +3,6 @@
 * Linux (Ubuntu)
 * Python >= 3.6 (Pytorch)
 * NVIDIA GPU + CUDA CuDNN
+```
+  pip install -r requirements.txt
+```
