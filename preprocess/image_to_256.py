@@ -4,7 +4,6 @@ import cv2
 import math
 
 def main(argv=None):
-
     image_dir = '../data/Trainset/image/'
     mask_dir = '../data/Trainset/mask/'
 
