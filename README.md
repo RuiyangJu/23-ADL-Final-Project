@@ -28,7 +28,8 @@ Before you run the following steps, make sure `cd 23-ADL-Final-Project`.
   python enhancement.py --gpu 0 --epochs 10 --base_model_name efficientnet-b0 --batch_size 16 --image_train_dir ./data/Trainset_256/image/ --mask_train_dir ./data/Trainset_256/mask/ --image_test_dir ./data/Testset/image/ --mask_test_dir ./data/Testset/mask/
 ```
 
-## Local Prediciton Preparation
+## Local Prediciton
+### Local Prediction Preparation
 ```
   python to_local_prediction.py --gpu 0 --original_dir data/Trainset/image/ --image_train_dir data/Trainset_256/image --mask_train_dir data/Trainset_256/mask --image_test_dir data/Testset/image --mask_test_dir data/Testset/mask --base_model_name efficientnet-b0
 ```
