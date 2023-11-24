@@ -15,6 +15,7 @@ Use gdown to download dataset from Google Drive:
 ```
 
 ## Preprocess
+Before you run the following steps, make sure `cd 23-ADL-Final-Project`.
 ```
   python preprocess/image_to_256.py
 ```
