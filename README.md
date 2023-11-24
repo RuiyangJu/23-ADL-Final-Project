@@ -35,5 +35,5 @@ Before you run the following steps, make sure `cd 23-ADL-Final-Project`.
 ```
 ### Local Prediction
 ```
-  python local_prediciton.py --gpu 0 --epochs 10 --base_model_name efficientnet-b0 --batch_size 16 --image_train_dir ./Unet/image_for_local_prediciton/train/patch/image/ --mask_train_dir ./Unet/image_for_local_prediciton/train/patch/mask/ --image_test_dir ./Unet/image_for_local_prediciton/test/ --mask_test_dir ./data/Testset/mask/
+  python local_prediction.py --gpu 0 --epochs 10 --base_model_name efficientnet-b0 --batch_size 16 --image_train_dir ./Unet/image_for_local_prediciton/train/patch/image/ --mask_train_dir ./Unet/image_for_local_prediciton/train/patch/mask/ --image_test_dir ./Unet/image_for_local_prediciton/test/ --mask_test_dir ./data/Testset/mask/
 ```
