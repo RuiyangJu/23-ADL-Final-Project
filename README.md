@@ -36,27 +36,27 @@
   python preprocess/image_to_512.py
 ```
 
-## Enhancement
+### Enhancement
 ```
   python enhancement.py --gpu 0 --epochs 10 --base_model_name efficientnet-b0 --batch_size 16 --image_train_dir ./data/Trainset_256/image/ --mask_train_dir ./data/Trainset_256/mask/ --image_test_dir ./data/Testset/image/ --mask_test_dir ./data/Testset/mask/
 ```
 
-## Local Prediciton
-### Local Prediction Preparation
+### Local Prediciton
+* Local Prediction Preparation
 ```
   python to_local_prediction.py --gpu 0 --original_dir data/Trainset/image/ --image_train_dir data/Trainset_256/image --mask_train_dir data/Trainset_256/mask --image_test_dir data/Testset/image --mask_test_dir data/Testset/mask --base_model_name efficientnet-b0
 ```
-### Local Prediction
+* Local Prediction
 ```
   python local_prediction.py --gpu 0 --epochs 10 --base_model_name efficientnet-b0 --batch_size 16 --image_train_dir ./Unet/image_for_local_prediciton/train/patch/image/ --mask_train_dir ./Unet/image_for_local_prediciton/train/patch/mask/ --image_test_dir ./Unet/image_for_local_prediciton/test/ --mask_test_dir ./data/Testset/mask/
 ```
 
-## Gobal Prediction
+### Gobal Prediction
 ```
   python gobal_prediction.py --gpu 0 --epochs 150 --base_model_name efficientnet-b0 --batch_size 4 --image_train_dir ./data/Trainset_512/image/ --mask_train_dir ./data/Trainset_512/mask/ --image_test_dir ./data/Testset/image/ --mask_test_dir ./data/Testset/mask/
 ```
 
-## Evaluate
+### Evaluate
 ```
   python evaluate.py --gpu 0 --base_model_name efficientnet-b0 --batch_size 16 --image_test_dir ./data/Testset/image/ --mask_test_dir ./data/Testset/mask/
 ```
