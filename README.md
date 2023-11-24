@@ -83,6 +83,25 @@
   python to_local_prediction.py --gpu 0 --base_model_name efficientnet-b0 --original_dir data/Trainset/image/ --image_train_dir data/Trainset_256/image --mask_train_dir data/Trainset_256/mask --image_test_dir data/Testset/image --mask_test_dir data/Testset/mask
 ```
 #### Local Prediction
+* Arguments:
+
+| Key | Value | Help |
+| :---: | :---: | :---: |
+| --gpu | 0 | number of GPU |
+| --epochs | 10 | number of epochs |
+| --lambda_bce | 50.0 | bce weight |
+| --base_model_name | efficientnet-b0 | base model name, i.e. efficientnet-b0 to efficientnet-b7 |
+| --encoder_weights | imagenet | pretrained encoder dataset |
+| --threshold | 0.30 | threshold for bgr mask |
+| --generator_lr | 2e-4 | generator learning rate |
+| --discriminator_lr | 2e-4 | discriminator learning rate |
+| --batch_size | 16 | batch size, i.e. 16, 32, 64 |
+| --image_train_dir | None | patched enhanced image train dir |
+| --mask_train_dir | None | patched enhanced mask train dir |
+| --image_test_dir | None | enhanced image test dir |
+| --mask_test_dir | None | original mask test dir |
+
+* For example:
 ```
   python local_prediction.py --gpu 0 --epochs 10 --base_model_name efficientnet-b0 --batch_size 16 --image_train_dir ./Unet/image_for_local_prediciton/train/patch/image/ --mask_train_dir ./Unet/image_for_local_prediciton/train/patch/mask/ --image_test_dir ./Unet/image_for_local_prediciton/test/ --mask_test_dir ./data/Testset/mask/
 ```
