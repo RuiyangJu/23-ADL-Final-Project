@@ -245,7 +245,7 @@ if __name__ == "__main__":
     parser.add_argument("--epochs", type=int, default=100, help="number epochs")
     parser.add_argument('--lambda_bce', type=float, default=50.0, help='bce weight')
     parser.add_argument('--base_model_name', type=str, default='efficientnet-b0', help='base_model_name')
-    parser.add_argument('--encoder_weights', type=str, default='imagenet', help='none or imagenet')
+    parser.add_argument('--encoder_weights', type=str, default='imagenet', help='pretrained encoder dataset')
     parser.add_argument('--generator_lr', type=float, default=2e-4, help='generator learning rate')
     parser.add_argument('--discriminator_lr', type=float, default=2e-4, help='discriminator learning rate')
     parser.add_argument('--batch_size', type=int, default=4, help='batch size')
