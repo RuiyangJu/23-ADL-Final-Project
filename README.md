@@ -1,4 +1,4 @@
-# NTU ADL Final Project
+# Final Project
 ## Environment
 * Linux (Ubuntu)
 * Python >= 3.6 (Pytorch)
