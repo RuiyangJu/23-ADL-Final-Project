@@ -25,5 +25,5 @@ Before you run the following steps, make sure `cd 23-ADL-Final-Project`.
 
 ## Enhancement
 ```
-  python enhancement.py --gpu 0 --epochs 1 --base_model_name efficientnet-b0 --batch_size 32
+  python enhancement.py --gpu 0 --epochs 10 --base_model_name efficientnet-b0 --batch_size 16
 ```
