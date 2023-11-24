@@ -4,6 +4,7 @@
 * Python >= 3.6 (Pytorch)
 * NVIDIA GPU + CUDA CuDNN
 ```
+  cd 23-ADL-Final-Project
   pip install -r requirements.txt
 ```
 
