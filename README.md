@@ -1,4 +1,4 @@
-# 2023 NTU ADL Final Project - Group 8
+# NTU ADL Final Project
 ## Environment
 * Linux (Ubuntu)
 * Python >= 3.6 (Pytorch)
