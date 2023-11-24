@@ -15,8 +15,8 @@
 ```
 
 ## Predict
-* Use gdown to download example trained model from Google Drive:
 ### Example Trained Model Download
+* Use gdown to download example trained model from Google Drive:
 ```
   bash download_model.sh
 ```
