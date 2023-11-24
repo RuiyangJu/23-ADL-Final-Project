@@ -14,7 +14,7 @@ Use gdown to download dataset from Google Drive:
   bash download_dataset.sh
 ```
 
-##　Predict
+## Predict
 
 
 ## Preprocess
