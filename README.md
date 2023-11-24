@@ -67,7 +67,7 @@ Arguments:
 | Key | Value | Help |
 | :---: | :---: | :---: |
 | --gpu | 0 | number of GPU |
-| --base_model_name | efficientnet-b0 | base model name|
+| --base_model_name | efficientnet-b0 | base model name, i.e. efficientnet-b0 to efficientnet-b7 |
 | --lambda_bce | 50.0 | bce weight |
 | --encoder_weights | imagenet | pretrained encoder dataset |
 | --threshold | 0.30 | threshold for bgr mask |
