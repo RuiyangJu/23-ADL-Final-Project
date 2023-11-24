@@ -42,6 +42,16 @@
 | Key | Value | Help |
 | :---: | :---: | :---: |
 | --gpu | 0 | GPU number |
+| --gpu | 0 | GPU number |
+| --gpu | 0 | GPU number |
+| --gpu | 0 | GPU number |
+| --gpu | 0 | GPU number |
+| --gpu | 0 | GPU number |
+| --gpu | 0 | GPU number |
+| --gpu | 0 | GPU number |
+| --gpu | 0 | GPU number |
+| --gpu | 0 | GPU number |
+| --gpu | 0 | GPU number |
 
 
 * For example:
