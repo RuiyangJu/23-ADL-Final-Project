@@ -21,6 +21,7 @@ parser.add_argument('--discriminator_lr', type=float, default=2e-4, help='discri
 parser.add_argument('--batch_size', type=int, default=16, help='batch size')
 parser.add_argument('--image_test_dir', type=str, required=True, help='original image test dir')
 parser.add_argument('--mask_test_dir', type=str, required=True, help='original mask test dir')
+parser.add_argument('--focal_gamma', type=float, default=2, help='focal gamma')
 opt = parser.parse_args()
 
 device = torch.device("cuda:%s" % opt.gpu)
@@ -30,8 +31,9 @@ lambda_bce = opt.lambda_bce
 generator_lr = opt.generator_lr
 threshold = opt.threshold
 encoder_weights = opt.encoder_weights
+focal_gamma = opt.focal_gamma
 
-weight_folder = './Unet/stage2_dibco_' + base_model_name + '_' + str(int(lambda_bce)) + '_' + str(generator_lr) + '_' + str(threshold) + '/'
+weight_folder = './Unet/stage2_dibco_' + base_model_name + '_' + str(int(lambda_bce)) + '_' + str(generator_lr) + '_' + str(threshold) + '_' + str(focal_gamma) + '/'
 weight_list = sorted(os.listdir(weight_folder))
 weight_list = [os.path.join(weight_folder, weight_path) for weight_path in weight_list 
                     if weight_path.endswith('pth') and 'Unet' in weight_path]
@@ -67,7 +69,7 @@ model.requires_grad_(False)
 model.eval()
 models.append(model)
 
-weight_folder = './Unet/stage3_dibco_' + base_model_name + '_' + str(int(lambda_bce)) + '_' + str(generator_lr) + '/'
+weight_folder = './Unet/stage3_dibco_' + base_model_name + '_' + str(int(lambda_bce)) + '_' + str(generator_lr) + '_' + str(focal_gamma) + '/'
 weight_list = os.listdir(weight_folder)
 weight_list = [os.path.join(weight_folder, weight_path) for weight_path in weight_list if 'unet_patch' in weight_path]
 weight_list = sorted(weight_list)
@@ -79,7 +81,7 @@ model.to(device)
 model.requires_grad_(False)
 model.eval()
 
-weight_folder = './Unet/stage3_resize_dibco_' + base_model_name + '_' + str(int(lambda_bce)) + '_' + str(generator_lr) + '/'
+weight_folder = './Unet/stage3_resize_dibco_' + base_model_name + '_' + str(int(lambda_bce)) + '_' + str(generator_lr) + '_' + str(focal_gamma) + '/'
 weight_list = os.listdir(weight_folder)
 weight_list = [os.path.join(weight_folder, weight_path) for weight_path in weight_list if 'unet_global' in weight_path]
 weight_list = sorted(weight_list)
@@ -103,7 +105,7 @@ skip_resize_ratio = 6
 skip_max_length = 512
 padding_resize_ratio = 4
 
-save_root_dir = './Unet/predicted_image'
+save_root_dir = './Unet/predicted_image' + '_' + str(focal_gamma)
 os.makedirs(save_root_dir, exist_ok=True)
 
 save_fmeasure = {

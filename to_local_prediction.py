@@ -13,6 +13,7 @@ parser.add_argument('--base_model_name', type=str, default='efficientnet-b0', he
 parser.add_argument('--lambda_bce', type=float, default=50.0, help='bce weight')
 parser.add_argument('--encoder_weights', type=str, default='imagenet', help='pretrained encoder dataset')
 parser.add_argument('--threshold', type=float, default=0.30, help='threshold for bgr mask')
+parser.add_argument('--focal_gamma', type=float, default=2, help='focal gamma')
 parser.add_argument('--generator_lr', type=float, default=2e-4, help='generator learning rate')
 parser.add_argument('--original_dir', type=str, required=True, help='original image train dir')
 parser.add_argument('--image_train_dir', type=str, required=True, help='patched image train dir')
@@ -30,7 +31,7 @@ generator_lr = opt.generator_lr
 threshold = opt.threshold
 encoder_weights = opt.encoder_weights
 
-weight_folder = './Unet/stage2_dibco_' + base_model_name + '_' + str(int(lambda_bce)) + '_' + str(generator_lr) + '_' + str(threshold)  + '/'
+weight_folder = './Unet/stage2_dibco_' + base_model_name + '_' + str(int(lambda_bce)) + '_' + str(generator_lr) + '_' + str(threshold) + '_' + str(opt.focal_gamma) + '/'
 weight_list = sorted(os.listdir(weight_folder))
 weight_list = [os.path.join(weight_folder, weight_path) for weight_path in weight_list 
                     if weight_path.endswith('pth') and 'Unet' in weight_path]
@@ -63,10 +64,10 @@ model.requires_grad_(False)
 model.eval()
 models.append(model)
 
-batch_size = 16
+batch_size = 12
 preprocess_input = get_preprocessing_fn(base_model_name, pretrained='imagenet')
 
-image_save_path = './Unet/image_for_local_prediciton'
+image_save_path = './Unet/image_for_local_prediciton' + '_' + str(opt.focal_gamma)
 os.makedirs(image_save_path, exist_ok=True)
 
 train_image_save_path = os.path.join(image_save_path, 'train')
@@ -93,7 +94,7 @@ reshape = (256, 256)
 predict_overlap_ratio = 0.1
 crop_h = 256
 crop_w = 256
-
+'''
 image_train_dir = opt.image_train_dir
 mask_train_dir = opt.mask_train_dir
 images = os.listdir(image_train_dir)
@@ -183,7 +184,7 @@ for img in images:
                 cv2.imwrite('%s/%s_s%dr%di%d.png' % (patch_train_image_save_path, image_name, scale_cnt, k, idx), img_tmp)
                 cv2.imwrite('%s/%s_s%dr%di%d.png' % (patch_train_mask_save_path, image_name, scale_cnt, k, idx), mask_tmp)
         scale_cnt += 1
-
+'''
 image_test_dir = opt.image_test_dir
 images = os.listdir(image_test_dir)
 for img in images:
